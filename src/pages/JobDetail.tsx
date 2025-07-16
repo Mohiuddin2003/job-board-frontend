@@ -16,7 +16,7 @@ const JobDetail: React.FC = () => {
   const [job, setJob] = useState<Job | null>(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/jobs/${id}`)
+    axios.get('https://job-board-backend-txjs.onrender.com/jobs')
       .then(res => setJob(res.data))
       .catch(err => console.error('Error loading job:', err));
   }, [id]);
