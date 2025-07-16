@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   const [jobs, setJobs] = useState<Job[]>([]);
 
   useEffect(() => {
-    axios.get('https://job-board-backend.onrender.com/jobs')
+   axios.get('https://job-board-backend.onrender.com/jobs')
       .then(res => setJobs(res.data))
       .catch(err => console.error('Error fetching jobs:', err));
   }, []);
