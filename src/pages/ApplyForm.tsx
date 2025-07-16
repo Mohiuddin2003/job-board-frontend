@@ -21,7 +21,7 @@ const ApplyForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/applications', {
+      await axios.post('https://job-board-backend-txjs.onrender.com/applications', {
         job_id: id,
         ...formData,
       });
